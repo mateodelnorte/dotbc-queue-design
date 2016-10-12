@@ -1,4 +1,7 @@
 $blue: #0C62AD;
+$white: #fff;
+$gray: #f2f2f2;
+$black: #000;
 
 @mixin light {
 	font-family: 'Open Sans', sans-serif;
@@ -29,4 +32,199 @@ $blue: #0C62AD;
 
 body {
 	@include regular;
+	margin: 0;
+	padding: 0;
+	background-color: $gray;
+	position: relative;
+}
+
+.container {
+	width: 100%;
+	max-width: 52em;
+	margin: 0 auto;
+}
+
+div, span {
+	box-sizing: border-box;
+}
+
+
+// Miscellaneous
+
+.sectionTitle {
+	text-transform: uppercase;
+	font-size: 1em;
+	color: rgba($black, .3);
+	@include bold;
+}
+
+.button {
+	padding: 1em 2em;
+	color: $white;
+	background: $blue;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	@include regular;
+	cursor: pointer;
+}
+
+.BGimage {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	&.bodyBG {
+		opacity: .1;
+	}
+}
+
+// Header
+
+header {
+	background-color: rgba($blue, .6);
+	color: $white;
+	padding: 4rem 2rem 1rem;
+	overflow: hidden;
+	position: relative;
+	a {
+		color: $white;
+	}
+	#logo {
+		.name {
+			font-size: 32px;
+			@include bold;
+		    position: relative;
+		    top: -12px;
+		}
+		img {
+			width: 60px;
+			margin-right: 1em;
+		}
+	}
+	#nav {
+		list-style-type: none;
+		float: right;
+		margin-top: 29px;
+		li {
+			float: left;
+			margin-right: 2em;
+			@include medium;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+	.intro {
+		margin: 40px 0 40px 80px;
+		max-width: 35rem;
+		@include light;
+	}
+}
+
+// Main
+
+#selectedPartners {
+	background-color: $white;
+	padding: 2em 0;
+	.sectionTitle {
+		text-align: center;
+	}
+	img {
+		text-align: center;
+		margin: 2em;
+		width: 100%;
+		max-width: 11.9%;
+	    vertical-align: middle;
+	}
+}
+
+#joinButton {
+	text-align: center;
+	margin: 6em 0;
+	.button {
+		font-size: 1.5em;
+	}
+}
+
+.queueNav {
+	margin: 1em 0;
+	overflow: hidden;
+	border: 4px solid $white;
+	span {
+		width: 50%;
+		float: left;
+		padding: 1em;
+		text-align: center;
+		@include medium;
+		cursor: pointer;
+		&:first-child {
+			border-right: 4px solid $white;
+		}
+		&.active {
+			background-color: $white;
+			&:hover {
+				background-color: rgba($white, 1);
+			}
+		}
+		&:hover {
+			background-color: rgba($white, .33);
+		}
+	}
+}
+
+#queue {
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 4em;
+	li {
+		background-color: $white;
+		padding: 2em;
+		margin: .5em 0;
+		span {
+			margin-right: 2em;
+			&.org {
+				@include bold;
+			}
+			&.title {
+				@include light;
+			}
+		}
+	}
+}
+
+
+// Footer 
+
+footer {
+	.container {
+		font-size: .75em;
+		max-width: 28em;
+	}
+	svg {
+		width: 1.5em;
+		display: inline-block;
+		height: 1.5em;
+		margin-right: .25em;
+	    position: relative;
+	    top: 5px;
+	}
+	.name {
+		@include medium;
+	}
+	span, a {
+		margin-right: 1em;
+		text-decoration: none;
+		color: $black;
+	}
+	.legal {
+		margin-top: 2em;
+		margin-bottom: 4em;
+		opacity: .33;
+	}
 }
