@@ -221,44 +221,53 @@ label {
     text-align: center;
     color: #bfbfbf;
     border: 1px dashed #bfbfbf;
-    width: 20%;
-    margin-right: 5%;
-    height: 30%;
+    width: 100%;
+    padding: 2em;
     float: left;
-    cursor: pointer; }
-  .filesDocs .uploaded {
-    float: left;
-    width: 75%; }
-    .filesDocs .uploaded ul li {
-      background: #fff;
-      padding: 1em;
-      margin-bottom: 1em;
+    cursor: pointer;
+    border-radius: 4px; }
+    .filesDocs .uploadNew:hover {
+      border-color: #000; }
+      .filesDocs .uploadNew:hover p {
+        color: #000; }
+      .filesDocs .uploadNew:hover svg.docIcon g {
+        fill: #000; }
+    .filesDocs .uploadNew p {
+      margin-bottom: 0; }
+    .filesDocs .uploadNew svg.docIcon {
+      display: inline-block; }
+      .filesDocs .uploadNew svg.docIcon g {
+        fill: #bfbfbf; }
+  .filesDocs .uploaded ul li {
+    background: #fff;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #bfbfbf;
+    border-radius: 4px; }
+    .filesDocs .uploaded ul li svg.docIcon {
+      float: left;
+      margin-right: 1em; }
+    .filesDocs .uploaded ul li svg.settingsIcon {
+      float: right;
+      cursor: pointer; }
+      .filesDocs .uploaded ul li svg.settingsIcon:hover g {
+        fill: #000; }
+    .filesDocs .uploaded ul li .docName {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      margin-top: .25em; }
+    .filesDocs .uploaded ul li .description {
+      font-size: .75em;
+      margin-left: 4.25em;
+      width: 80%; }
+    .filesDocs .uploaded ul li textarea {
+      width: 80%;
+      max-width: 80%;
       border: 1px solid #bfbfbf;
-      border-radius: 4px; }
-      .filesDocs .uploaded ul li svg.docIcon {
-        float: left;
-        margin-right: 1em; }
-      .filesDocs .uploaded ul li svg.settingsIcon {
-        float: right;
-        cursor: pointer; }
-        .filesDocs .uploaded ul li svg.settingsIcon:hover g {
-          fill: #000; }
-      .filesDocs .uploaded ul li .docName {
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 700;
-        margin-top: .25em; }
-      .filesDocs .uploaded ul li .description {
-        font-size: .75em;
-        margin-left: 4.25em;
-        width: 80%; }
-      .filesDocs .uploaded ul li textarea {
-        width: 80%;
-        max-width: 80%;
-        border: 1px solid #bfbfbf;
-        padding: 1em;
-        border-radius: 4px;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 400; }
+      padding: 1em;
+      border-radius: 4px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400; }
 
 footer .container {
   font-size: .75em;
