@@ -3,6 +3,8 @@ $white: #fff;
 $gray: #f2f2f2;
 $black: #000;
 
+$border: darken($gray, 20%);
+
 @mixin light {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
@@ -81,6 +83,25 @@ div, span {
 	z-index: -1;
 	&.bodyBG {
 		opacity: .1;
+	}
+}
+
+#legalInfo {
+	width: 100%;
+	max-width: 31em;
+	margin: 0 auto 4em;
+	#legalBlock {
+		width: 100%;
+		height: 21em;
+		overflow: scroll;
+		border: 1px solid $border;
+		border-radius: 4px;
+		background-color: $white;
+		padding: 0 1em;
+		margin-top: .5em;
+		p {
+			font-size: .8em;
+		}
 	}
 }
 
@@ -195,6 +216,44 @@ header {
 				@include light;
 			}
 		}
+	}
+}
+
+
+// Form
+
+form {
+	width: 100%;
+	max-width: 31em;
+	margin: 4em auto;
+	border-bottom: 1px solid $border;
+	padding-bottom: 4em;
+	box-sizing: border-box;
+}
+
+.input-field {
+	margin-bottom: 3em;
+	input, textarea {
+		width: 100%;
+		margin: .5em 0 0;
+		padding: 1em;
+		border: 1px solid $border;
+		border-radius: 4px;
+		font-size: 1.1em;
+	}
+	.instruction {
+		color: $border;
+		font-size: .7em;
+	}
+}
+
+label {
+	display: block;
+	@include bold;
+	font-size: .8em;
+	span {
+		color: $border;
+		margin-left: .5em;
 	}
 }
 
