@@ -42,7 +42,7 @@ body {
 
 .container {
 	width: 100%;
-	max-width: 52em;
+	max-width: 49em;
 	margin: 0 auto;
 }
 
@@ -148,6 +148,9 @@ header {
 			float: left;
 			margin-right: 2em;
 			@include medium;
+			&:last-child {
+				margin-right: 0;
+			}
 			a {
 				text-decoration: none;
 			}
@@ -158,6 +161,25 @@ header {
 		max-width: 35rem;
 		@include light;
 	}
+	@media (max-width: 550px) {
+		padding: 2rem 1rem;
+		#logo {
+			.name {
+				font-size: 20px;
+				top: -8px;
+			}
+			img {
+				width: 30px;
+			}
+		}
+		#nav {
+			margin-top: 5px;
+		}
+		.intro {
+			margin: 3em 0 0;
+			font-size: .8em;
+		}
+	}
 }
 
 // Main
@@ -165,6 +187,7 @@ header {
 #selectedPartners {
 	background-color: $white;
 	padding: 2em 0;
+	text-align: center;
 	.sectionTitle {
 		text-align: center;
 	}
@@ -172,8 +195,19 @@ header {
 		text-align: center;
 		margin: 2em;
 		width: 100%;
-		max-width: 11.9%;
+		max-width: 11.4%;
 	    vertical-align: middle;
+	}
+	@media (max-width: 800px) {
+		img {
+			margin: 1em;
+		}
+	}
+	@media (max-width: 470px) {
+		img {
+			margin: 1.5em;
+			max-width: 19%;
+		}
 	}
 }
 
@@ -184,6 +218,13 @@ header {
 		font-size: 1.5em;
 		&:hover {
 			background-color: $black;
+		}
+	}
+	@media (max-width: 450px) {
+		padding: 1em;
+		.button {
+			font-size: 1.25em;
+			padding: 1em;
 		}
 	}
 }
@@ -210,6 +251,12 @@ header {
 		}
 		&:hover {
 			background-color: rgba($white, .33);
+		}
+	}
+	@media (max-width: 800px) {
+		padding: 1em;
+		span {
+			width: 100%;
 		}
 	}
 }
@@ -240,6 +287,9 @@ form {
 	max-width: 31em;
 	margin: 4em auto;
 	box-sizing: border-box;
+	input[type="submit"] {
+		font-size: 1em;
+	}
 }
 
 .input-field {
@@ -285,8 +335,13 @@ label {
 	padding: 2em 3em 2em 2em;
 	overflow: hidden;
 	> div {
-		width: 50%;
 		float: left;
+		&:first-child {
+			width: 40%;
+		}
+		&:last-child {
+			width: 60%;
+		}
 	}
 	label {
 		color: $border;
@@ -363,11 +418,12 @@ label {
 				.description {
 					font-size: .75em;
 					margin-left: 4.25em;
-					width: 80%;
+					width: 100%;
+					max-width: 35rem;
 				}
 				textarea {
-					width: 80%;
-					max-width: 80%;
+					width: 100%;
+					max-width: 35rem;
 					border: 1px solid $border;
 					padding: 1em;
 					border-radius: 4px;
