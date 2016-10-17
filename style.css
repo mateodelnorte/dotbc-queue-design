@@ -14,7 +14,7 @@ body {
 div, span, input, textarea {
   box-sizing: border-box; }
 
-button, svg, .queueNav div {
+button, svg, .queueNav div, td, tr {
   transition: all .1s linear; }
 
 ul.unstyled {
@@ -71,6 +71,15 @@ ul.unstyled {
     margin-top: .5em; }
     #legalInfo #legalBlock p {
       font-size: .8em; }
+
+.queue li span, .queue td span {
+  margin-right: 2em; }
+  .queue li span.org, .queue td span.org {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700; }
+  .queue li span.title, .queue td span.title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300; }
 
 header {
   background-color: rgba(12, 98, 173, 0.6);
@@ -157,7 +166,8 @@ header {
 .queueNav {
   margin: 1em 0;
   overflow: hidden;
-  border: 4px solid #fff; }
+  border: 4px solid #fff;
+  border-radius: 8px; }
   .queueNav span {
     width: 50%;
     float: left;
@@ -277,37 +287,106 @@ label {
       display: inline-block; }
       .filesDocs .uploadNew svg.docIcon g {
         fill: #bfbfbf; }
-  .filesDocs .uploaded ul li {
-    background: #fff;
-    padding: 1em;
-    margin-bottom: 1em;
+
+.file {
+  background: #fff;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #bfbfbf;
+  border-radius: 4px; }
+  .file svg.docIcon {
+    float: left;
+    margin-right: 1em; }
+  .file svg.settingsIcon,
+  .file svg.downloadIcon {
+    float: right;
+    cursor: pointer; }
+    .file svg.settingsIcon:hover g,
+    .file svg.downloadIcon:hover g {
+      fill: #000; }
+  .file .docName {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    margin-top: .25em; }
+  .file .description {
+    font-size: .75em;
+    margin-left: 4.25em;
+    width: 100%;
+    max-width: 35rem; }
+  .file textarea {
+    width: 100%;
+    max-width: 35rem;
     border: 1px solid #bfbfbf;
-    border-radius: 4px; }
-    .filesDocs .uploaded ul li svg.docIcon {
-      float: left;
-      margin-right: 1em; }
-    .filesDocs .uploaded ul li svg.settingsIcon {
-      float: right;
+    padding: 1em;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400; }
+
+#adminTabs {
+  margin: 4em 0 2em; }
+  #adminTabs li {
+    display: inline-block;
+    margin-right: 2em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    opacity: .333;
+    cursor: pointer; }
+    #adminTabs li.active, #adminTabs li:hover {
+      opacity: 1; }
+
+#adminQueue {
+  width: 100%;
+  border-collapse: collapse; }
+  #adminQueue img {
+    height: 2em; }
+  #adminQueue tr {
+    border-bottom: 1px solid #bfbfbf; }
+    #adminQueue tr:last-child {
+      border: none; }
+  #adminQueue td {
+    padding: 1em;
+    margin: 0;
+    background-color: #fff; }
+    #adminQueue td:nth-child(1) {
+      font-size: 1.25em;
+      width: 2em;
+      text-align: right;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700; }
+    #adminQueue td:nth-child(2) {
+      width: 15%;
+      text-align: center; }
+    #adminQueue td:nth-child(3) {
+      width: 25%; }
+      #adminQueue td:nth-child(3) span {
+        display: block; }
+    #adminQueue td:nth-child(4) {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700; }
+    #adminQueue td:nth-child(5), #adminQueue td:nth-child(6) {
+      width: 2em;
+      text-align: center; }
+    #adminQueue td:nth-child(5) {
       cursor: pointer; }
-      .filesDocs .uploaded ul li svg.settingsIcon:hover g {
-        fill: #000; }
-    .filesDocs .uploaded ul li .docName {
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 700;
-      margin-top: .25em; }
-    .filesDocs .uploaded ul li .description {
-      font-size: .75em;
-      margin-left: 4.25em;
-      width: 100%;
-      max-width: 35rem; }
-    .filesDocs .uploaded ul li textarea {
-      width: 100%;
-      max-width: 35rem;
-      border: 1px solid #bfbfbf;
-      padding: 1em;
-      border-radius: 4px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 400; }
+    #adminQueue td:nth-child(6) {
+      cursor: -webkit-grab; }
+      #adminQueue td:nth-child(6):active, #adminQueue td:nth-child(6):focus {
+        cursor: -webkit-grabbing; }
+  #adminQueue .open {
+    vertical-align: top; }
+    #adminQueue .open td:nth-child(4) p {
+      margin-top: 0; }
+    #adminQueue .open .moreInfo {
+      font-size: .8em; }
+  #adminQueue .file svg.docIcon {
+    width: 1.5em; }
+    #adminQueue .file svg.docIcon g {
+      fill: #bfbfbf; }
+  #adminQueue .file .description {
+    margin-left: 3.25em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    max-width: 80%; }
 
 footer .container {
   font-size: .75em;

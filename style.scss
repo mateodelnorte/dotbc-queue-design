@@ -50,7 +50,7 @@ div, span, input, textarea {
 	box-sizing: border-box;
 }
 
-button, svg, .queueNav div {
+button, svg, .queueNav div, td, tr {
 	transition: all .1s linear;
 }
 
@@ -114,6 +114,18 @@ ul.unstyled {
 		margin-top: .5em;
 		p {
 			font-size: .8em;
+		}
+	}
+}
+
+.queue {
+	li span, td span {
+		margin-right: 2em;
+		&.org {
+			@include bold;
+		}
+		&.title {
+			@include light;
 		}
 	}
 }
@@ -233,6 +245,7 @@ header {
 	margin: 1em 0;
 	overflow: hidden;
 	border: 4px solid $white;
+	border-radius: 8px;
 	span {
 		width: 50%;
 		float: left;
@@ -392,44 +405,140 @@ label {
 	}
 	.uploaded {
 		ul {
-			li {
-				background: $white;
-				padding: 1em;
-				margin-bottom: 1em;
-				border: 1px solid $border;
-				border-radius: 4px;
-				svg.docIcon {
-					float: left;
-					margin-right: 1em;
-				}
-				svg.settingsIcon {
-					float: right;
-					cursor: pointer;
-					&:hover {
-						g {
-							fill: $black;
-						}
-					}
-				}
-				.docName {
-					@include bold;
-					margin-top: .25em;
-				}
-				.description {
-					font-size: .75em;
-					margin-left: 4.25em;
-					width: 100%;
-					max-width: 35rem;
-				}
-				textarea {
-					width: 100%;
-					max-width: 35rem;
-					border: 1px solid $border;
-					padding: 1em;
-					border-radius: 4px;
-					@include regular;
-				}
+			
+		}
+	}
+}
+
+.file {
+	background: $white;
+	padding: 1em;
+	margin-bottom: 1em;
+	border: 1px solid $border;
+	border-radius: 4px;
+	svg.docIcon {
+		float: left;
+		margin-right: 1em;
+	}
+	svg.settingsIcon,
+	svg.downloadIcon {
+		float: right;
+		cursor: pointer;
+		&:hover {
+			g {
+				fill: $black;
 			}
+		}
+	}
+	.docName {
+		@include bold;
+		margin-top: .25em;
+	}
+	.description {
+		font-size: .75em;
+		margin-left: 4.25em;
+		width: 100%;
+		max-width: 35rem;
+	}
+	textarea {
+		width: 100%;
+		max-width: 35rem;
+		border: 1px solid $border;
+		padding: 1em;
+		border-radius: 4px;
+		@include regular;
+	}
+}
+
+
+// Admin
+
+#adminTabs {
+	margin: 4em 0 2em;
+	li {
+		display: inline-block;
+		margin-right: 2em;
+		@include bold;
+		opacity: .333;
+		cursor: pointer;
+		&.active, &:hover {
+			opacity: 1;
+		}
+	}
+}
+
+#adminQueue {
+	width: 100%;
+	border-collapse: collapse;
+	img {
+		height: 2em;
+	}
+	tr {
+		border-bottom: 1px solid $border;
+		&:last-child {
+			border: none;
+		}
+	}
+	td {
+		padding: 1em;
+		margin: 0;
+		background-color: $white;
+		&:nth-child(1) {
+			font-size: 1.25em;
+			width: 2em;
+			text-align: right;
+			@include bold;
+		}
+		&:nth-child(2) {
+			width: 15%;
+			text-align: center;
+		}
+		&:nth-child(3) {
+			width: 25%;
+			span {
+				display: block;
+			}
+		}
+		&:nth-child(4) {
+			@include bold;
+		}
+		&:nth-child(5),
+		&:nth-child(6) {
+			width: 2em;
+			text-align: center;
+		}
+		&:nth-child(5) {
+			cursor: pointer;
+		}
+		&:nth-child(6) {
+			cursor: -webkit-grab;
+			&:active, &:focus {
+				cursor: -webkit-grabbing;
+			}
+		}
+	}
+	.open {
+		vertical-align: top;
+		td:nth-child(4) {
+			p {
+				margin-top: 0;
+			}
+		}
+		.moreInfo {
+			font-size: .8em;
+		}
+	}
+	.file {
+		svg.docIcon {
+			width: 1.5em;
+			g {
+				fill: $border;
+			}
+		}
+		.description {
+			margin-left: 3.25em;
+			@include regular;
+			max-width: 80%;
 		}
 	}
 }
