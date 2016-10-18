@@ -11,7 +11,7 @@ body {
   max-width: 49em;
   margin: 0 auto; }
 
-div, span, input, textarea {
+div, span, input, textarea, tr, td {
   box-sizing: border-box; }
 
 button, svg, .queueNav div, td, tr {
@@ -63,6 +63,9 @@ ul.unstyled {
   border-top: 1px solid #bfbfbf;
   padding-top: 4em;
   box-sizing: border-box; }
+  @media (max-width: 530px) {
+    #legalInfo {
+      padding: 4em 20px 0; } }
   #legalInfo #legalBlock {
     width: 100%;
     height: 21em;
@@ -83,6 +86,10 @@ ul.unstyled {
   .queue li span.title, .queue td span.title {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300; }
+  @media (max-width: 800px) {
+    .queue li span, .queue td span {
+      text-align: center;
+      display: block; } }
 
 header {
   background-color: rgba(12, 98, 173, 0.6);
@@ -215,6 +222,9 @@ form {
   box-sizing: border-box; }
   form input[type="submit"] {
     font-size: 1em; }
+  @media (max-width: 530px) {
+    form {
+      padding: 0 20px; } }
 
 .input-field {
   margin-bottom: 3em; }
@@ -245,6 +255,9 @@ label {
     font-size: 2em;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700; }
+  @media (max-width: 530px) {
+    .queueNumber {
+      padding: 2em 20px; } }
 
 .userSubmittedInfo {
   background: #fff;
@@ -262,11 +275,17 @@ label {
     margin-top: .25em;
     font-size: 1.1em;
     margin-bottom: 1.25em; }
+  @media (max-width: 780px) {
+    .userSubmittedInfo .personal, .userSubmittedInfo .purpose {
+      width: 100% !important; } }
 
 .filesDocs {
   margin: 4em 0;
   overflow: hidden;
   min-height: 10em; }
+  @media (max-width: 530px) {
+    .filesDocs {
+      padding: 0 20px; } }
   .filesDocs > label {
     margin-bottom: 1em; }
   .filesDocs .uploadNew {
@@ -316,6 +335,9 @@ label {
     margin-left: 4.25em;
     width: 100%;
     max-width: 35rem; }
+    @media (max-width: 530px) {
+      .file .description {
+        width: 75%; } }
   .file textarea {
     width: 100%;
     max-width: 35rem;
@@ -324,9 +346,15 @@ label {
     border-radius: 4px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400; }
+    @media (max-width: 530px) {
+      .file textarea {
+        margin-top: 1em; } }
 
 #adminTabs {
   margin: 4em 0 2em; }
+  @media (max-width: 800px) {
+    #adminTabs {
+      padding: 0 1em; } }
   #adminTabs li {
     display: inline-block;
     margin-right: 2em;
@@ -340,7 +368,35 @@ label {
 #adminQueue {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 4em; }
+  margin-bottom: 4em;
+  max-width: 90em; }
+  @media (max-width: 800px) {
+    #adminQueue {
+      position: relative; }
+      #adminQueue tr {
+        position: relative; }
+        #adminQueue tr td {
+          display: block;
+          width: 100% !important;
+          text-align: center;
+          position: relative; }
+          #adminQueue tr td:nth-child(1) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: auto !important; }
+          #adminQueue tr td:nth-child(3) span {
+            margin: 0; }
+          #adminQueue tr td:nth-child(5) {
+            position: absolute;
+            top: 0;
+            right: 4em;
+            width: auto !important; }
+          #adminQueue tr td:nth-child(6) {
+            position: absolute;
+            top: 0;
+            right: 1em;
+            width: auto !important; } }
   #adminQueue img {
     height: 2em; }
   #adminQueue tr {
@@ -376,6 +432,8 @@ label {
       cursor: -webkit-grab; }
       #adminQueue td:nth-child(6):active, #adminQueue td:nth-child(6):focus {
         cursor: -webkit-grabbing; }
+    #adminQueue td:nth-child(2), #adminQueue td:nth-child(3), #adminQueue td:nth-child(4) {
+      cursor: pointer; }
   #adminQueue .moreInfo {
     display: none; }
   #adminQueue .open {
