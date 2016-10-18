@@ -336,7 +336,8 @@ label {
 
 #adminQueue {
   width: 100%;
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  margin-bottom: 4em; }
   #adminQueue img {
     height: 2em; }
   #adminQueue tr {
