@@ -460,6 +460,31 @@ label {
     font-weight: 400;
     max-width: 80%; }
 
+body.withModal {
+  overflow: hidden;
+  background-color: #0C62AD; }
+  body.withModal header, body.withModal main, body.withModal footer, body.withModal #selectedPartners, body.withModal #joinButton {
+    opacity: .3; }
+
+.modal {
+  position: fixed;
+  top: 5em;
+  left: 50%;
+  margin: 0 auto;
+  margin-left: -10em;
+  width: 20em;
+  background-color: #f2f2f2;
+  padding: 1em;
+  border-radius: 8px;
+  z-index: 10; }
+  .modal form {
+    margin: 0; }
+    .modal form .input-field {
+      margin-bottom: 1em; }
+  .modal .button {
+    font-size: .7em;
+    float: right; }
+
 footer .container {
   font-size: .75em;
   max-width: 28em; }
