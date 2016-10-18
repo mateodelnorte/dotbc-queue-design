@@ -50,7 +50,7 @@ div, span, input, textarea, tr, td {
 	box-sizing: border-box;
 }
 
-button, svg, .queueNav div, td, tr {
+button, svg, .queueNav div, td, tr, .button {
 	transition: all .1s linear;
 }
 
@@ -83,6 +83,9 @@ ul.unstyled {
 	border-radius: 4px;
 	@include regular;
 	cursor: pointer;
+	&:hover {
+		background: $black;
+	}
 }
 
 .BGimage {

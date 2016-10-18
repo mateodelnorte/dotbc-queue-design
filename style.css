@@ -14,7 +14,7 @@ body {
 div, span, input, textarea, tr, td {
   box-sizing: border-box; }
 
-button, svg, .queueNav div, td, tr {
+button, svg, .queueNav div, td, tr, .button {
   transition: all .1s linear; }
 
 #adminQueue * {
@@ -42,6 +42,8 @@ ul.unstyled {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   cursor: pointer; }
+  .button:hover {
+    background: #000; }
 
 .BGimage {
   position: absolute;
