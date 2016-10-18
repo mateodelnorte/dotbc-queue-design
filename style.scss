@@ -520,9 +520,12 @@ label {
 	}
 	.open {
 		vertical-align: top;
+		td {
+			padding-top: 1.75em;
+		}
 		td:nth-child(4) {
-			p {
-				margin-top: 0;
+			> p {
+				margin-top: 44px;
 			}
 		}
 		.moreInfo {

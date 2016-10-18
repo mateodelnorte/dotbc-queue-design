@@ -375,8 +375,10 @@ label {
         cursor: -webkit-grabbing; }
   #adminQueue .open {
     vertical-align: top; }
-    #adminQueue .open td:nth-child(4) p {
-      margin-top: 0; }
+    #adminQueue .open td {
+      padding-top: 1.75em; }
+    #adminQueue .open td:nth-child(4) > p {
+      margin-top: 44px; }
     #adminQueue .open .moreInfo {
       font-size: .8em; }
   #adminQueue .file svg.docIcon {
