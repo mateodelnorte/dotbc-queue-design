@@ -17,6 +17,9 @@ div, span, input, textarea {
 button, svg, .queueNav div, td, tr {
   transition: all .1s linear; }
 
+#adminQueue * {
+  transition: all .1s linear; }
+
 ul.unstyled {
   list-style-type: none;
   padding: 0;
@@ -373,6 +376,8 @@ label {
       cursor: -webkit-grab; }
       #adminQueue td:nth-child(6):active, #adminQueue td:nth-child(6):focus {
         cursor: -webkit-grabbing; }
+  #adminQueue .moreInfo {
+    display: none; }
   #adminQueue .open {
     vertical-align: top; }
     #adminQueue .open td {
@@ -380,13 +385,19 @@ label {
     #adminQueue .open td:nth-child(4) > p {
       margin-top: 44px; }
     #adminQueue .open .moreInfo {
-      font-size: .8em; }
+      font-size: .8em;
+      display: inherit; }
   #adminQueue .file svg.docIcon {
     width: 1.5em; }
     #adminQueue .file svg.docIcon g {
       fill: #bfbfbf; }
+  #adminQueue .file svg.downloadIcon {
+    margin-top: .25em; }
+  #adminQueue .file .docName {
+    margin-top: .5em;
+    margin-bottom: .5em; }
   #adminQueue .file .description {
-    margin-left: 3.25em;
+    margin-left: 3.4em;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     max-width: 80%; }

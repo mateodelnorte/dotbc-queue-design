@@ -54,6 +54,10 @@ button, svg, .queueNav div, td, tr {
 	transition: all .1s linear;
 }
 
+#adminQueue * {
+	transition: all .1s linear;
+}
+
 
 // Miscellaneous
 
@@ -518,6 +522,9 @@ label {
 			}
 		}
 	}
+	.moreInfo {
+		display: none;
+	}
 	.open {
 		vertical-align: top;
 		td {
@@ -530,6 +537,7 @@ label {
 		}
 		.moreInfo {
 			font-size: .8em;
+			display: inherit;
 		}
 	}
 	.file {
@@ -539,8 +547,15 @@ label {
 				fill: $border;
 			}
 		}
+		svg.downloadIcon {
+			margin-top: .25em;
+		}
+		.docName {
+			margin-top: .5em;
+			margin-bottom: .5em;
+		}
 		.description {
-			margin-left: 3.25em;
+			margin-left: 3.4em;
 			@include regular;
 			max-width: 80%;
 		}
