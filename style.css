@@ -88,6 +88,13 @@ ul.unstyled {
   .queue li span.title, .queue td span.title {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300; }
+  .queue li span.email, .queue td span.email {
+    font-size: .75em;
+    margin-top: .25em; }
+    .queue li span.email a, .queue td span.email a {
+      color: #000; }
+      .queue li span.email a:hover, .queue td span.email a:hover {
+        color: #0C62AD; }
   @media (max-width: 800px) {
     .queue li span, .queue td span {
       text-align: center;
@@ -370,8 +377,8 @@ label {
 #adminQueue {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 4em;
-  max-width: 90em; }
+  max-width: 90em;
+  margin: 0 auto 4em; }
   @media (max-width: 800px) {
     #adminQueue {
       position: relative; }
@@ -389,18 +396,19 @@ label {
             width: auto !important; }
           #adminQueue tr td:nth-child(3) span {
             margin: 0; }
-          #adminQueue tr td:nth-child(5) {
+          #adminQueue tr td:nth-child(6) {
             position: absolute;
             top: 0;
             right: 4em;
             width: auto !important; }
-          #adminQueue tr td:nth-child(6) {
+          #adminQueue tr td:nth-child(7) {
             position: absolute;
             top: 0;
             right: 1em;
             width: auto !important; } }
   #adminQueue img {
-    height: 2em; }
+    height: 2em;
+    display: inherit; }
   #adminQueue tr {
     border-bottom: 1px solid #bfbfbf; }
     #adminQueue tr:last-child {
@@ -425,14 +433,14 @@ label {
     #adminQueue td:nth-child(4) {
       font-family: 'Open Sans', sans-serif;
       font-weight: 700; }
-    #adminQueue td:nth-child(5), #adminQueue td:nth-child(6) {
+    #adminQueue td:nth-child(6), #adminQueue td:nth-child(7) {
       width: 2em;
       text-align: center; }
-    #adminQueue td:nth-child(5) {
-      cursor: pointer; }
     #adminQueue td:nth-child(6) {
+      cursor: pointer; }
+    #adminQueue td:nth-child(7) {
       cursor: -webkit-grab; }
-      #adminQueue td:nth-child(6):active, #adminQueue td:nth-child(6):focus {
+      #adminQueue td:nth-child(7):active, #adminQueue td:nth-child(7):focus {
         cursor: -webkit-grabbing; }
     #adminQueue td:nth-child(2), #adminQueue td:nth-child(3), #adminQueue td:nth-child(4) {
       cursor: pointer; }
@@ -443,10 +451,12 @@ label {
     #adminQueue .open td {
       padding-top: 1.75em; }
     #adminQueue .open td:nth-child(4) > p {
-      margin-top: 44px; }
+      margin-top: 64px; }
     #adminQueue .open .moreInfo {
       font-size: .8em;
       display: inherit; }
+    #adminQueue .open .button {
+      display: inline-block; }
   #adminQueue .file svg.docIcon {
     width: 1.5em; }
     #adminQueue .file svg.docIcon g {
@@ -461,6 +471,15 @@ label {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     max-width: 80%; }
+  #adminQueue .button {
+    color: #bfbfbf;
+    border: 1px solid #bfbfbf;
+    padding: .25em 1em;
+    border-radius: 4px;
+    background-color: #fff; }
+    #adminQueue .button:hover {
+      color: #0C62AD;
+      border-color: #0C62AD; }
 
 body.withModal {
   overflow: hidden;
